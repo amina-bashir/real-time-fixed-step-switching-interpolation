@@ -1,4 +1,4 @@
-# Interpolated Switching to Obtain Accuracy for Fixed-Step Solvers in Real-Time Simulation of High Frequency Converters
+# Interpolated Switching to Obtain Accuracy for Coarser Fixed-Step Solvers in Real-Time Simulation of High Frequency Converters
 
 ## The real-time problem
 
