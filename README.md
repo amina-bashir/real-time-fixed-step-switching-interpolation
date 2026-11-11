@@ -8,7 +8,7 @@ Real-time and hardware-in-the-loop (HIL) simulators must run with a fixed time s
 
 1. **A way to isolate real-time solver artifacts.** The same circuit is simulated with an idealised variable-step reference and with a real-time fixed-step solver. Every difference from the reference is an artifact of the fixed-step simulation.
 2. **A fixed-step interpolated bridge model.** A custom switch model accounts for switching events inside each time step and removes those artifacts while running with a purely fixed step, as a real-time target requires.
-3. **Faster simulation with the same accuracy.** At 100 ns the interpolated model reproduces the reference waveform in about one fifth of the reference run time on the same PC.
+3. **A 5 times coarser step with the same accuracy.** Going from 20 ns to 100 ns, the plain fixed-step model degrades sharply: the DC offset of the transformer current grows from 3.09 A to 19.75 A. The interpolated model keeps the reference accuracy at both steps: the offset stays at 0.0036 A and 0.0034 A, and the peak currents stay within 0.06 A of the reference. At 100 ns it needs about one fifth of the reference run time on the same PC.
 
 ## Converter and operating point
 
